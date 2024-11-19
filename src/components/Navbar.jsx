@@ -57,18 +57,28 @@ const Navbar = ({ authTokens, handleLogout }) => {
                 } p-6 bg-black-gradient absolute top-20 right-0 z-10 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
               >
                 <ul className="list-none flex justify-end items-start flex-1 flex-col">
-                  {navLinks.map((nav, index) => (
-                    <Link
-                      to={`/${nav.id}`}
-                      key={nav.id}
-                      className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                        active === nav.title ? "text-white" : "text-dimWhite"
-                      } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
-                      onClick={() => setActive(nav.title)}
-                    >
-                      <a href={`#${nav.id}`}>{nav.title}</a>
-                    </Link>
-                  ))}
+                  {navLinks.map((nav, index) => {
+                    if (nav.id === "login" && authTokens) return null;
+                    if (nav.id === "signOut" && !authTokens) return null;
+                    return (
+                      <Link
+                        to={`/${nav.id}`}
+                        key={nav.id}
+                        className={`font-poppins font-medium cursor-pointer text-[16px] ${
+                          active === nav.title ? "text-white" : "text-dimWhite"
+                        } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
+                        onClick={(e) => {
+                          if (nav.id === "signOut") {
+                            handleLogout();
+                            e.preventDefault();
+                          }
+                          setActive(nav.title);
+                        }}
+                      >
+                        <a href={`#${nav.id}`}>{nav.title}</a>
+                      </Link>
+                    );
+                  })}
                 </ul>
               </div>
             </div>
