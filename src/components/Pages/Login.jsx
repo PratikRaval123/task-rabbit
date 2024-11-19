@@ -36,10 +36,13 @@ export default function Login({ setTokens }) {
 
   return (
     <>
-      <div className="bg-primary w-full overflow-hidden  h-[100vh] ">
+      <div className="bg-primary w-full overflow-hidden  h-[100vh] px-5">
         <section className="">
           <div className="flex flex-col items-center justify-center  lg:py-0 mt-20">
-            <a href="#" className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
+            <a
+              href="#"
+              className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white"
+            >
               <img
                 className="w-15 h-10 mb-5"
                 src="https://task-rabbit-ivory.vercel.app/assets/logo1.04579f1e.svg"
@@ -51,9 +54,16 @@ export default function Login({ setTokens }) {
                 <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
                   Sign in to your account
                 </h1>
-                <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 md:space-y-6" action="#">
+                <form
+                  onSubmit={handleSubmit(onSubmit)}
+                  className="space-y-4 md:space-y-6"
+                  action="#"
+                >
                   <div>
-                    <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                    <label
+                      htmlFor="email"
+                      className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
                       Your email
                     </label>
                     <input
@@ -71,7 +81,10 @@ export default function Login({ setTokens }) {
                     />
                   </div>
                   <div>
-                    <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                    <label
+                      htmlFor="password"
+                      className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
                       Password
                     </label>
                     <input
@@ -94,12 +107,6 @@ export default function Login({ setTokens }) {
                   >
                     Sign in
                   </button>
-                  <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-                    Don’t have an account yet?{" "}
-                    <Link to="/signup" className="font-medium text-primary-600 hover:underline dark:text-primary-500">
-                      Sign up
-                    </Link>
-                  </p>
                 </form>
               </div>
             </div>
