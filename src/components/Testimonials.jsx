@@ -9,8 +9,8 @@ const Testimonials = () => (
   >
     <div className="absolute z-[0] w-[60%] h-[60%] -right-[50%] rounded-full blue__gradient bottom-40" />
 
-    <div className="mx-auto flex justify-between items-center md:flex-row flex-col sm:mb-16 mb-6 relative z-[1] lg:gap-20">
-      <h2 className="font-poppins font-semibold xs:text-[28px] text-[24px] text-white xs:leading-[76.8px] leading-[40.8px] w-full">
+    <div className="mx-auto flex justify-between items-center md:flex-row flex-col sm:mb-16 mb-10 relative z-[1] lg:gap-20">
+      <h2 className="font-poppins font-semibold xs:text-[28px] text-[20px] text-white xs:leading-[76.8px] leading-[40.8px] w-full">
         See what happy customers are saying about Taskrabbit{" "}
       </h2>
     </div>

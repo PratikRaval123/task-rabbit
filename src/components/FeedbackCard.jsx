@@ -1,5 +1,5 @@
 const FeedbackCard = ({ content, name, title, img }) => (
-  <div className="flex justify-between flex-col px-10 py-10 rounded-[20px]  max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-0 feedback-card">
+  <div className="flex justify-between flex-col md:px-10 px-5 md:py-10 py-5 rounded-[20px]  max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-0 feedback-card">
     <div className="flex gap-5 flex-row md:mb-0 mb-4">
       <h4 className="font-poppins font-semibold text-[20px] leading-[32px] text-white">
         {name}
@@ -53,7 +53,7 @@ const FeedbackCard = ({ content, name, title, img }) => (
       </div>
     </div>
 
-    <p className="font-poppins font-normal text-[18px] leading-[32.4px] text-white my-10">
+    <p className="font-poppins font-normal text-[14px] md:text-[16px] leading-[32.4px] text-white my-5 md:my-10">
       {content}
     </p>
 

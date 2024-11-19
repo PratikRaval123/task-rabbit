@@ -1,25 +1,42 @@
-import { people01, people02, people03, facebook, instagram, linkedin, twitter, OverallExellent, send, shield, star } from "../assets";
+import {
+  people01,
+  people02,
+  people03,
+  facebook,
+  instagram,
+  linkedin,
+  twitter,
+  OverallExellent,
+  send,
+  shield,
+  star,
+} from "../assets";
 
 export const navLinks = [
   {
-    id: "home",
-    title: "Home",
-  },
-  {
     id: "service",
     title: "Service",
+    redirect: "/service",
   },
   {
     id: "becomeATester",
     title: "Become A Tester",
+    redirect: "/becomeATester",
   },
   {
-    id: "About us",
+    id: "AboutUs",
     title: "About Us",
+    redirect: "/about",
   },
   {
     id: "login",
     title: "Login",
+    redirect: "/login",
+  },
+  {
+    id: "signOut",
+    title: "Sign Out",
+    redirect: "/signout",
   },
 ];
 
@@ -28,22 +45,19 @@ export const features = [
     id: "feature-1",
     icon: star,
     title: "Rewards",
-    content:
-      "The best credit cards offer some tantalizing combinations of promotions and prizes",
+    content: "The best credit cards offer some tantalizing combinations of promotions and prizes",
   },
   {
     id: "feature-2",
     icon: shield,
     title: "100% Secured",
-    content:
-      "We take proactive steps make sure your information and transactions are secure.",
+    content: "We take proactive steps make sure your information and transactions are secure.",
   },
   {
     id: "feature-3",
     icon: send,
     title: "Balance Transfer",
-    content:
-      "A balance transfer credit card can save you a lot of money in interest charges.",
+    content: "A balance transfer credit card can save you a lot of money in interest charges.",
   },
 ];
 
@@ -101,24 +115,21 @@ export const feedback = [
 export const satisfactions = [
   {
     id: "feedback-1",
-    content:
-      "If you’re not satisfied, we’ll work to make it right.",
+    content: "If you’re not satisfied, we’ll work to make it right.",
     name: "Happiness Pledge",
     title: "Furniture Assembly",
     img: people01,
   },
   {
     id: "feedback-2",
-    content:
-      "Taskers are always background checked before joining the platform.",
+    content: "Taskers are always background checked before joining the platform.",
     name: "Vetted Taskers",
     title: "Home Repairs",
     img: people02,
   },
   {
     id: "feedback-3",
-    content:
-      "Friendly service when you need us – every day of the week.",
+    content: "Friendly service when you need us – every day of the week.",
     name: "Dedicated Support",
     title: "Electrical help",
     img: people03,
@@ -155,43 +166,47 @@ export const stats = [
 
 export const footerLinks = [
   {
-    title: "Useful Links",
+    title: "Discover",
     links: [
       {
-        name: "Content",
+        name: "Become a Tasker",
         link: "https://www.hoobank.com/content/",
       },
       {
-        name: "How it Works",
+        name: "Services By City",
         link: "https://www.hoobank.com/how-it-works/",
       },
       {
-        name: "Create",
+        name: "Services Nearby",
         link: "https://www.hoobank.com/create/",
       },
       {
-        name: "Explore",
+        name: "All Services",
         link: "https://www.hoobank.com/explore/",
       },
       {
-        name: "Terms & Services",
+        name: "Elite Taskers",
+        link: "https://www.hoobank.com/terms-and-services/",
+      },
+      {
+        name: "Help",
         link: "https://www.hoobank.com/terms-and-services/",
       },
     ],
   },
   {
-    title: "Community",
+    title: "Company",
     links: [
       {
-        name: "Help Center",
+        name: "About Us",
         link: "https://www.hoobank.com/help-center/",
       },
       {
-        name: "Partners",
+        name: "Careers",
         link: "https://www.hoobank.com/partners/",
       },
       {
-        name: "Suggestions",
+        name: "Press",
         link: "https://www.hoobank.com/suggestions/",
       },
       {
@@ -199,7 +214,7 @@ export const footerLinks = [
         link: "https://www.hoobank.com/blog/",
       },
       {
-        name: "Newsletters",
+        name: "Terms & Privacy",
         link: "https://www.hoobank.com/newsletters/",
       },
     ],
@@ -247,5 +262,4 @@ export const clients = [
     id: "client-1",
     logo: OverallExellent,
   },
-
 ];

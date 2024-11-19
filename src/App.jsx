@@ -1,52 +1,42 @@
-import styles from "./style";
-import {
-  Billing,
-  Business,
-  CardDeal,
-  Clients,
-  CTA,
-  Footer,
-  Navbar,
-  Stats,
-  Testimonials,
-  Hero,
-} from "./components";
-import Satisfactions from "./components/Satisfactions";
-import HowItWorks from "./components/HowItWorks";
-import SliderComponent from "./components/SliderComponent";
-import PopulerProject from "./components/PopulerProject";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import LandingPage from "./components/LadingPage";
+import Service from "./components/Pages/Service";
+import BecomeATester from "./components/Pages/BecomeATester";
+import Login from "./components/Pages/Login";
+import SignUp from "./components/Pages/SignUp";
+import AboutUs from "./components/Pages/AboutUs";
+import { AuthContext } from "./Auth";
+import { useState } from "react";
+import { Footer, Navbar } from "./components";
+const App = () => {
+  const [authTokens, setAuthTokens] = useState(localStorage.getItem("tokens") || "");
+  const setTokens = (data) => {
+    localStorage.setItem("tokens", JSON.stringify(data));
+    setAuthTokens(data);
+  };
 
-const App = () => (
-  <div className="bg-primary w-full overflow-hidden">
-    <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-      <div className={`${styles.boxWidth}`}>
-        <Navbar />
-      </div>
-    </div>
+  console.log("authTokens", authTokens);
 
-    <div className={`bg-primary ${styles.flexStart}`}>
-      <div className={`${styles.boxWidth}`}>
-        <Hero />
-        <SliderComponent />
-      </div>
-    </div>
-
-    <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
-      <div className={`${styles.boxWidth}`}>
-        <PopulerProject />
-        <Stats />
-        {/* <Business /> */}
-        {/* <Billing /> */}
-        {/* <CardDeal /> */}
-        <Testimonials />
-        <Satisfactions />
-        <Clients />
-        <HowItWorks />
-        {/* <CTA /> */}
+  const handleLogout = () => {
+    localStorage.removeItem("tokens");
+    setAuthTokens("");
+  };
+  return (
+    <AuthContext.Provider value={{ authTokens, setAuthTokens: setTokens }}>
+      <BrowserRouter>
+        <Navbar authTokens={authTokens} handleLogout={handleLogout} />
+        <Routes>
+          <Route path="/" element={<LandingPage authTokens={authTokens} handleLogout={handleLogout} />} />
+          <Route path="/service" element={<Service />} />
+          <Route path="/login" element={<Login setTokens={setTokens} />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/AboutUs" element={<AboutUs />} />
+          <Route path="/becomeATester" element={<BecomeATester />} />
+        </Routes>
         <Footer />
-      </div>
-    </div>
-  </div>
-);
+      </BrowserRouter>
+    </AuthContext.Provider>
+  );
+};
 
 export default App;

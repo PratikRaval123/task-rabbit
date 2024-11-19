@@ -44,7 +44,7 @@ export default function PopulerProject() {
     },
   ];
   return (
-    <div className=" py-10 px-5 md:px-20 mt-20 rounded-2xl">
+    <div className="py-10 px-0 md:px-20 md:mt-20 mt-5 rounded-2xl">
       <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center md:text-left text-white">
         Popular Projects
       </h2>
@@ -60,8 +60,10 @@ export default function PopulerProject() {
               className="w-full h-48 object-cover"
             />
             <div className="p-4">
-              <h3 className="text-lg font-semibold mb-2 text-white">{project.title}</h3>
-              <p className="text-white">{project.price}</p>
+              <h3 className="md:text-lg text-sm font-semibold mb-2 text-white">
+                {project.title}
+              </h3>
+              <p className="text-white md:text-lg text-sm">{project.price}</p>
             </div>
           </div>
         ))}

@@ -1,18 +1,11 @@
 import styles from "../style";
-import { discount, robot } from "../assets";
-import GetStarted from "./GetStarted";
 
 const Hero = () => {
   return (
-    <section
-      id="home"
-      className={`flex md:flex-row flex-col ${styles.paddingY}`}
-    >
-      <div
-        className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6 items-center`}
-      >
+    <section id="home" className={`flex md:flex-row flex-col ${styles.paddingY}`}>
+      <div className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6 items-center`}>
         <div className="flex flex-row justify-center  md:w-[60%] w-full items-center">
-          <h1 className="flex-1 font-poppins font-semibold md:text-[66px] text-[40px] text-white md:leading-[100.8px] leading-[75px] text-center">
+          <h1 className="flex-1 font-poppins font-semibold md:text-[66px] text-[38px] text-white md:leading-[100.8px] leading-[60px] text-center">
             Book trusted help for home tasks
             <br className="sm:block hidden" />{" "}
           </h1>
