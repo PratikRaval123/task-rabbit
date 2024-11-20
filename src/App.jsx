@@ -9,7 +9,9 @@ import { AuthContext } from "./Auth";
 import { useState } from "react";
 import { Footer, Navbar } from "./components";
 const App = () => {
-  const [authTokens, setAuthTokens] = useState(localStorage.getItem("tokens") || "");
+  const [authTokens, setAuthTokens] = useState(
+    localStorage.getItem("tokens") || ""
+  );
   const setTokens = (data) => {
     localStorage.setItem("tokens", JSON.stringify(data));
     setAuthTokens(data);
@@ -26,12 +28,20 @@ const App = () => {
       <BrowserRouter>
         <Navbar authTokens={authTokens} handleLogout={handleLogout} />
         <Routes>
-          <Route path="/" element={<LandingPage authTokens={authTokens} handleLogout={handleLogout} />} />
+          <Route
+            path="/"
+            element={
+              <LandingPage
+                authTokens={authTokens}
+                handleLogout={handleLogout}
+              />
+            }
+          />
           <Route path="/service" element={<Service />} />
           <Route path="/login" element={<Login setTokens={setTokens} />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/AboutUs" element={<AboutUs />} />
-          <Route path="/becomeATester" element={<BecomeATester />} />
+          <Route path="/becomeATasker" element={<BecomeATester />} />
         </Routes>
         <Footer />
       </BrowserRouter>

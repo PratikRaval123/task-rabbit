@@ -1,6 +1,7 @@
 import styles from "../style";
 import { logo } from "../assets";
 import { footerLinks, socialMedia } from "../constants";
+import { Link } from "react-router-dom";
 
 const Footer = () => (
   <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
@@ -31,14 +32,15 @@ const Footer = () => (
                 </h4>
                 <ul className="list-none mt-4">
                   {footerlink.links.map((link, index) => (
-                    <li
+                    <Link
                       key={link.name}
+                      to={link.link}
                       className={`font-poppins font-normal md:text-[16px] text-[14px] leading-[24px] text-dimWhite hover:text-secondary cursor-pointer ${
                         index !== footerlink.links.length - 1 ? "mb-4" : "mb-0"
-                      }`}
+                      } block`}
                     >
                       {link.name}
-                    </li>
+                    </Link>
                   ))}
                 </ul>
               </div>
@@ -51,19 +53,7 @@ const Footer = () => (
             Copyright Ⓒ 2023 Taskrabbit. All Rights Reserved.
           </p>
 
-          <div className="flex flex-row md:mt-0 mt-6">
-            {socialMedia.map((social, index) => (
-              <img
-                key={social.id}
-                src={social.icon}
-                alt={social.id}
-                className={`w-[21px] h-[21px] object-contain cursor-pointer ${
-                  index !== socialMedia.length - 1 ? "mr-6" : "mr-0"
-                }`}
-                onClick={() => window.open(social.link)}
-              />
-            ))}
-          </div>
+          {/* i */}
         </div>
       </section>
     </div>

@@ -19,9 +19,9 @@ export const navLinks = [
     redirect: "/service",
   },
   {
-    id: "becomeATester",
-    title: "Become A Tester",
-    redirect: "/becomeATester",
+    id: "becomeATasker",
+    title: "Become A Tasker",
+    redirect: "/becomeATasker",
   },
   {
     id: "AboutUs",
@@ -170,27 +170,27 @@ export const footerLinks = [
     links: [
       {
         name: "Become a Tasker",
-        link: "https://www.hoobank.com/content/",
+        link: "/becomeATasker",
       },
       {
         name: "Services By City",
-        link: "https://www.hoobank.com/how-it-works/",
+        link: "/",
       },
       {
         name: "Services Nearby",
-        link: "https://www.hoobank.com/create/",
+        link: "/service",
       },
       {
         name: "All Services",
-        link: "https://www.hoobank.com/explore/",
+        link: "/service",
       },
       {
         name: "Elite Taskers",
-        link: "https://www.hoobank.com/terms-and-services/",
+        link: "/",
       },
       {
         name: "Help",
-        link: "https://www.hoobank.com/terms-and-services/",
+        link: "/",
       },
     ],
   },
@@ -199,23 +199,23 @@ export const footerLinks = [
     links: [
       {
         name: "About Us",
-        link: "https://www.hoobank.com/help-center/",
+        link: "/AboutUs",
       },
       {
         name: "Careers",
-        link: "https://www.hoobank.com/partners/",
+        link: "/",
       },
       {
         name: "Press",
-        link: "https://www.hoobank.com/suggestions/",
+        link: "/",
       },
       {
         name: "Blog",
-        link: "https://www.hoobank.com/blog/",
+        link: "/",
       },
       {
         name: "Terms & Privacy",
-        link: "https://www.hoobank.com/newsletters/",
+        link: "/",
       },
     ],
   },
@@ -224,11 +224,11 @@ export const footerLinks = [
     links: [
       {
         name: "Our Partner",
-        link: "https://www.hoobank.com/our-partner/",
+        link: "/",
       },
       {
         name: "Become a Partner",
-        link: "https://www.hoobank.com/become-a-partner/",
+        link: "/",
       },
     ],
   },
